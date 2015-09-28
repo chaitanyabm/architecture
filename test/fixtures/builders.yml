@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  builder_name: MyString
+  location: MyString
+  project: MyString
+  bhk_details: MyString
+
+two:
+  builder_name: MyString
+  location: MyString
+  project: MyString
+  bhk_details: MyString

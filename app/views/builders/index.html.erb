@@ -1,0 +1,53 @@
+<h1>Builders are: </h1>
+
+
+    <table class="table table-striped">
+        <thead>
+            
+            <td><h2>Builder Name</h2></td>
+            
+        
+            <td><h2>Location</h2></td>
+            
+             
+            <td> <h2>Project Details </h2></td>
+            
+             
+            <td><h2>BHK Details </h2></td>
+          
+            <td><h2>Action  </h2></td>
+        
+            
+        </thead>
+    <tbody>
+        
+            <% @builder.each do |builder| %>
+            <tr>
+        
+    <td><%= link_to builder.bname, builder_path(builder.id) %></td>
+    
+        
+    <td><%= link_to builder.location, builder_path(builder.id)%></td>
+    
+   
+     
+    <td> <%= builder.project %></td>
+   
+   
+     
+          <td> <%= builder.bhk_details %></td>
+
+    
+            <td><%= link_to "edit", edit_builder_path(builder.id) %>  | 
+              <%= link_to "delete", builder_path(builder.id),method: :delete ,data: {confirm: "Are you sure?" }%> |
+           <%= link_to "show", builder_path(builder.id)  %> 
+             
+            </td>
+      </tr>
+<% end %>
+
+    </tbody>
+      </table>
+    
+
+  <a href="/builders/new">Add A new project</a>
